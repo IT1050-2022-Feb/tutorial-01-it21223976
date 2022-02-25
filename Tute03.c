@@ -11,20 +11,26 @@ sum = 1+2+3+....+ 99+100 = 5050
 n -> 1-
 sum = 1+2+3+...+10 = 55 */
 
-#include <stdio.h>
-int main() {
-  int num, sum = 0, i;
+#include <iostream>
+int main()
+{
+    using namespace std;
+    int no;
+    long fac;
 
-  printf ("n -> ");
-  scanf ("%d", &num);
+    cout << "Enter a Number : ";
+    cin >> no;
 
-  for (i = 1; i <= num; i++)
-  {
-    sum  = sum + i;
-  }
-  
-  printf ("Sum = %d", sum);
+    fac = 1;
+    for (int r=no; r >= 1; r--) {
+        fac = fac * r;
+    }
 
-  return 0;
+    // cout << "Factorial of %d is %ld\n", no, fac);  
+
+    cout << "Factorial of " << no << " is " << fac << endl;  
+
+    return 0;
 }
+
 
