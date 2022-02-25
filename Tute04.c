@@ -4,43 +4,36 @@ Implement the three functions minimum(), maximum() and multiply() below the main
 
 Do not change the code given in the main() function when you are implementing your solution.*/
 #include <iostream>
+using namespace std;
 
-long Factorial(int no);
-long nCr(int n, int r);
+void print(int len, int wth);
+void input(int &len, int &wth);
 
+// Do not change the main() function
 int main() {
-  int n, r;
-  std::cout << "Enter a value for n ";
-  std::cin >> n;
-
-  std::cout << "Enter a value for r ";
-  std::cin >> r;
-
-  std::cout << "nCr = ";
-  std::cout << nCr(n,r);
-  std::cout << std::endl;
-
-  return 0;
+   int length = 10, width = 5;
+   input(length, width);
+   print(length, width);
+   return 0;
 }
 
-long Factorial(int no)
+// Do not change the print() function
+void print(int len, int wth) 
 {
-  int i, num = 1;
-  for (i = 1; i <= no; i++)
-  {
-    num = num * i;
-  }
-  return num;
+   cout << "Length : " << len 
+        << ", Width  : " << wth << endl;
+}
+
+// Implement the Input Function here
+
+void input(int &len, int &wth)
+{
+    len = 12;
+    wth = 5;
 }
 
 
-long nCr(int n, int r)
-{
-  return Factorial(n)  / (Factorial(r) * Factorial(n - r));
-}
 
-int multiply (int no1, int no2)
-{
   return no1 * no2;
 }
 
